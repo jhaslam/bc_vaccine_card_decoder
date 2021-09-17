@@ -1,4 +1,3 @@
-import json
 import unittest
 
 from decode_utils import extract_payload

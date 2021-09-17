@@ -19,10 +19,10 @@ def numeric_to_jws(numeric_encoded: str) -> str:
     #         represents a single JWS character.
     #     2) From the decimal value of each of these pairs, add 45
     #     3) Convert the result of each decimal value to UTF-8.
-    pairs = [numeric_encoded[i:i+2] for i in range(0, len(numeric_encoded), 2)]
-    decimal_vals = [int(val) for val in pairs]
-    shifted_vals = [val + 45 for val in decimal_vals]
-    characters = [chr(val) for val in shifted_vals]
+    pairs = (numeric_encoded[i:i+2] for i in range(0, len(numeric_encoded), 2))
+    decimal_vals = (int(val) for val in pairs)
+    shifted_vals = (val + 45 for val in decimal_vals)
+    characters = (chr(val) for val in shifted_vals)
     return ''.join(characters)
 
 def extract_jws_payload(jws: str) -> str:

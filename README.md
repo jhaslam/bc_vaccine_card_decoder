@@ -1,7 +1,7 @@
 # British Columbia Vaccine Card Decoder
 
 ## Disclaimer
-I am in no way associated with the proivince of British Columbia, except
+I am in no way associated with the province of British Columbia, except
 for the fact that I happen to live here. I am simply a software engineer
 scratching a curiosity itch.
 
