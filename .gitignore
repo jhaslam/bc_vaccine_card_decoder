@@ -1,4 +1,5 @@
 .vscode
-__pycache__
+.idea
 *.code-workspace
-/project_env/
+__pycache__
+/venv/

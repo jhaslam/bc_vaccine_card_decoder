@@ -1,7 +1,6 @@
 import unittest
 
-from decode_utils import extract_payload
-
+from shc_decode import extract_payload
 
 test_qr_code = 'shc:/562976095243206034602924374044603122295953265460346029254\
 077280433602870286471674522280928621222566537223704296356254474534240035642333\
@@ -32,14 +31,15 @@ class TestDecode(unittest.TestCase):
     def test_extract_payload(self):
         payload = extract_payload(test_qr_code)
 
-        family_name = payload['vc']\
-            ['credentialSubject']\
-            ['fhirBundle']\
-            ['entry'][0]\
-            ['resource']\
-            ['name'][0]\
+        family_name = payload['vc'] \
+            ['credentialSubject'] \
+            ['fhirBundle'] \
+            ['entry'][0] \
+            ['resource'] \
+            ['name'][0] \
             ['family']
-        
+
         self.assertEqual(family_name, 'Anyperson')
+
 
 unittest.main()
